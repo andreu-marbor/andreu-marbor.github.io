@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.andreumarbor.tresenraya",
+      "sha256_cert_fingerprints": [
+        "c0611f2147456f0aaeffd5924c9112917e2b870e97404bb0a2a9b3d4ef060ec9"
+      ]
+    }
+  }
+]
