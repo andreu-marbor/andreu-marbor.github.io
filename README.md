@@ -26,19 +26,30 @@ dependencias y sin JavaScript**: HTML y CSS publicados tal cual.
 
 Secciones, en este orden y con esta jerarquía de encabezados:
 
-1. **Hero** (`h1`): nombre, `Lead Software Engineer`, enfoque actual, meta de
-   ubicación/experiencia y CTAs a proyectos, GitHub y LinkedIn.
-2. **01 · Perfil** (`h2`): quién soy y qué me interesa.
-3. **02 · Enfoque**: cuatro áreas de competencia e interés (arquitectura,
-   backend, desarrollo asistido por IA, productividad).
+1. **Hero** (`h1`): nombre, `Lead Software Engineer`, posicionamiento (experiencia
+   profesional en arquitectura, backend, frontend y desarrollo asistido por IA,
+   más la exploración agéntica fuera del trabajo), meta de ubicación/experiencia
+   y CTAs a proyectos, GitHub y LinkedIn.
+2. **01 · Perfil** (`h2`): once años repartidos entre backend y frontend
+   enterprise, interés por el diseño de sistemas, Codex en el trabajo y
+   experimentación con agentes fuera de él.
+3. **02 · Enfoque**: seis áreas de competencia e interés (arquitectura,
+   backend, APIs e integraciones, frontend y aplicaciones cliente, desarrollo
+   asistido por IA, productividad).
 4. **03 · Proyectos**: CatFoodCheck (API + app), 3 en raya, Quiz Historia y
-   este sitio. Cada uno con problema, arquitectura, decisiones y —en
-   `<details>`— límites/incidencias.
-5. **04 · Experimentación**: desarrollo asistido por IA como pregunta de
-   ingeniería, no como reclamo.
-6. **05 · Trayectoria**: contraste explícito entre **experiencia consolidada**
-   y **explorando ahora**.
-7. **CTA de GitHub** y **pie** (nombre, copyright, GitHub, LinkedIn, idioma).
+   este sitio, presentados como **proyectos personales**. Cada uno con
+   problema, arquitectura, decisiones y —en `<details>`— límites/incidencias.
+5. **04 · Práctica y experimentación**: desarrollo asistido por IA como
+   pregunta de ingeniería, separando **práctica profesional (Codex)** de
+   **experimentación personal (OpenCode, agentes, subagents)**.
+6. **05 · Trayectoria**: **experiencia profesional** en tres bloques
+   (ingeniería y arquitectura · frontend y aplicaciones cliente · desarrollo
+   asistido por IA) y, al final, **credenciales** (4 certificaciones OpenAI,
+   Scrum Fundamentals Certified de ScrumStudy y Elements of AI de la
+   Universidad de Helsinki, sin enlaces de verificación).
+7. **06 · Exploración**: áreas de investigación actual (ingeniería agéntica,
+   OpenCode, automatización del ciclo de desarrollo, otras tecnologías).
+8. **CTA de GitHub** y **pie** (nombre, copyright, GitHub, LinkedIn, idioma).
 
 ### Decisiones técnicas
 
@@ -140,3 +151,13 @@ npx --yes csstree-validator styles.css
 # Accesibilidad y responsive: axe-core (0 violaciones) y comprobación de
 # overflow horizontal de 320 a 1440 px, vía Chrome DevTools Protocol.
 ```
+
+Comprobaciones adicionales que se repiten tras cada cambio de contenido:
+
+- **Paridad ES/EN**: ambos ficheros deben tener la misma secuencia de
+  etiquetas, los mismos `id` y las mismas anclas (`href="#…"` resolubles).
+  Difieren solo en el texto y en el enlace de idioma.
+- **Enlaces externos**: todos devuelven 200 (LinkedIn responde `999` a las
+  peticiones automatizadas, es su bloqueo habitual).
+- **Rejillas**: `Enfoque` 2×3, `Experiencia` 3 columnas y `Explorando` 2×2 a
+  partir de ~860 px de ancho; por debajo pasan a 2 y a 1 columna.

@@ -535,6 +535,12 @@ main {
   margin-top: 30px;
 }
 
+/* Separación entre bloques de contenido de una misma sección */
+.prosa + .columnas,
+.columnas + .bloque {
+  margin-top: 30px;
+}
+
 code {
   font-family: var(--fuente-mono);
   font-size: 0.88em;
@@ -571,7 +577,7 @@ code {
 
 .columnas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 28px;
 }
 
@@ -735,6 +741,14 @@ code {
 
   .proyecto-notas dd {
     margin-bottom: 6px;
+  }
+}
+
+/* La navegación se parte en dos líneas en pantallas muy estrechas y la
+   cabecera crece: se compensa el desplazamiento de las anclas. */
+@media (max-width: 368px) {
+  html {
+    scroll-padding-top: 172px;
   }
 }
 
