@@ -3,214 +3,559 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Andreu Martínez — Portfolio</title>
-  <meta name="description" content="Portfolio de Andreu Martínez Bordes. Proyectos: 3 en raya (PWA multilenguaje + APK) y más.">
-  <meta name="theme-color" content="#FAF9F7">
+
+  <title>Andreu Martínez Bordes — Lead Software Engineer</title>
+  <meta name="description" content="Lead Software Engineer con 11 años de experiencia en backend con Java y Spring, APIs, integraciones y arquitectura de software. Proyectos reales y experimentación con desarrollo asistido por IA.">
+  <meta name="author" content="Andreu Martínez Bordes">
+  <meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
+  <!-- Idiomas: la raíz es español, la versión en inglés vive en /en.html -->
+  <link rel="canonical" href="https://andreu-marbor.github.io/">
+  <link rel="alternate" hreflang="es" href="https://andreu-marbor.github.io/">
+  <link rel="alternate" hreflang="en" href="https://andreu-marbor.github.io/en.html">
+  <link rel="alternate" hreflang="x-default" href="https://andreu-marbor.github.io/">
+
+  <!-- Iconos del dominio (generados a partir del avatar) -->
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="images/favicon.png" type="image/png" sizes="64x64">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <style>
-    :root {
-      --bg: #FAF9F7;
-      --surface: #FFFFFF;
-      --text: #1d1d1f;
-      --muted: #6b7280;
-      --line: #e7e3dd;
-      --accent: #1d1d1f;
-      --radius: 18px;
-    }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #000000;
-        --surface: #121212;
-        --text: #f5f5f7;
-        --muted: #9ca3af;
-        --line: #2a2a2a;
-        --accent: #f5f5f7;
-      }
-    }
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Andreu Martínez Bordes">
+  <meta property="og:title" content="Andreu Martínez Bordes — Lead Software Engineer">
+  <meta property="og:description" content="Arquitectura de software, ingeniería backend y sistemas fiables. 11 años de experiencia y experimentación con desarrollo asistido por IA.">
+  <meta property="og:url" content="https://andreu-marbor.github.io/">
+  <meta property="og:image" content="https://andreu-marbor.github.io/images/avatar.jpg">
+  <meta property="og:image:width" content="448">
+  <meta property="og:image:height" content="448">
+  <meta property="og:image:alt" content="Retrato de Andreu Martínez Bordes">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Andreu Martínez Bordes — Lead Software Engineer">
+  <meta name="twitter:description" content="Arquitectura de software, ingeniería backend y sistemas fiables. 11 años de experiencia y experimentación con desarrollo asistido por IA.">
+  <meta name="twitter:image" content="https://andreu-marbor.github.io/images/avatar.jpg">
+  <meta name="twitter:image:alt" content="Retrato de Andreu Martínez Bordes">
 
-    * { box-sizing: border-box; }
+  <link rel="stylesheet" href="styles.css">
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: var(--bg);
-      color: var(--text);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 48px 20px 32px;
-    }
-
-    main { width: 100%; max-width: 640px; }
-
-    header {
-      text-align: center;
-      margin-bottom: 36px;
-    }
-
-    .avatar {
-      display: block;
-      width: 112px;
-      height: 112px;
-      border-radius: 50%;
-      margin: 0 auto 14px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .10);
-    }
-
-    h1 {
-      font-size: 26px;
-      margin: 0 0 6px;
-      letter-spacing: -0.5px;
-    }
-
-    header p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .proyecto {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
-    }
-
-    .proyecto img {
-      width: 84px;
-      height: 84px;
-      border-radius: 20px;
-      flex-shrink: 0;
-      display: block;
-    }
-
-    .proyecto .info { min-width: 0; }
-
-    .proyecto h2 {
-      margin: 0 0 4px;
-      font-size: 19px;
-      letter-spacing: -0.3px;
-    }
-
-    .proyecto p {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    .etiquetas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin: 0 0 14px;
-      padding: 0;
-      list-style: none;
-    }
-
-    .etiquetas li {
-      font-size: 11.5px;
-      color: var(--muted);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 3px 9px;
-      background: var(--bg);
-    }
-
-    .acciones {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    a.boton {
-      display: inline-block;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: transform .15s ease, opacity .15s ease;
-    }
-
-    a.boton:active { transform: scale(.97); }
-
-    a.primario {
-      background: var(--accent);
-      color: var(--bg);
-    }
-
-    a.secundario {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--line);
-    }
-
-    a.boton:hover { opacity: .85; }
-
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.7;
-    }
-
-    footer a { color: var(--muted); }
-
-    @media (max-width: 480px) {
-      .proyecto { flex-direction: column; text-align: center; align-items: center; }
-      .etiquetas, .acciones { justify-content: center; }
-    }
-  </style>
+  <!--
+    Este repositorio además aloja .well-known/assetlinks.json (Digital Asset
+    Links) en la raíz del dominio para las apps Android/TWA. Ver README.md.
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Andreu Martínez Bordes",
+    "jobTitle": "Lead Software Engineer",
+    "url": "https://andreu-marbor.github.io/",
+    "image": "https://andreu-marbor.github.io/images/avatar.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cartagena",
+      "addressCountry": "ES"
+    },
+    "sameAs": [
+      "https://github.com/andreu-marbor",
+      "https://www.linkedin.com/in/andreu-martinez/"
+    ],
+    "knowsAbout": [
+      "Software architecture",
+      "Java",
+      "Spring Boot",
+      "REST APIs",
+      "Backend engineering",
+      "Enterprise integration",
+      "AI-assisted software development"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <main>
-    <header>
-      <img class="avatar" src="images/avatar.jpg" alt="Retrato de Andreu Martínez Bordes" width="112" height="112">
-      <h1>Andreu Martínez Bordes</h1>
-      <p>Portfolio · desarrollo web y Android</p>
-    </header>
+  <a class="saltar-al-contenido" href="#contenido">Saltar al contenido</a>
 
-    <section class="proyecto">
-      <img src="https://andreu-marbor.github.io/tres-en-raya/icons/icono-512.png"
-           alt="Icono del juego 3 en raya" width="84" height="84">
-      <div class="info">
-        <h2>3 en raya — Tic-tac-toe</h2>
-        <p>Juego multilenguaje (es · va · en) con modo 2 jugadores y CPU invencible.
-           PWA instalable + APK firmada.</p>
-        <ul class="etiquetas">
-          <li>TypeScript</li>
-          <li>Vite</li>
-          <li>PWA</li>
-          <li>TWA / Android</li>
-          <li>i18n</li>
-        </ul>
-        <div class="acciones">
-          <a class="boton primario" href="https://andreu-marbor.github.io/tres-en-raya/">Jugar ahora</a>
-          <a class="boton secundario" href="https://github.com/andreu-marbor/tres-en-raya">Ver código</a>
-          <a class="boton secundario" href="https://github.com/andreu-marbor/tres-en-raya/releases/latest">Descargar APK</a>
+  <header class="barra">
+    <div class="contenedor barra-interno">
+      <a class="marca" href="./">Andreu Martínez Bordes</a>
+
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <a href="#sobre">Sobre mí</a>
+        <a href="#enfoque">Enfoque</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#ia">IA</a>
+      </nav>
+
+      <nav class="nav-idioma" aria-label="Idioma">
+        <a href="en.html" hreflang="en" lang="en"><span class="visualmente-oculto">Ver la página en </span>EN</a>
+      </nav>
+
+      <a class="nav-icono" href="https://github.com/andreu-marbor" aria-label="Perfil de GitHub de Andreu Martínez Bordes">
+        <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- Hero -->
+    <section class="hero contenedor" aria-labelledby="nombre">
+      <img class="avatar" src="images/avatar.jpg" alt="Retrato de Andreu Martínez Bordes"
+           width="448" height="448" fetchpriority="high" decoding="async">
+      <h1 id="nombre">Andreu Martínez Bordes</h1>
+      <p class="rol">Lead Software Engineer</p>
+      <p class="lead">
+        Ingeniería de software, arquitectura y sistemas fiables. Ahora mismo
+        explorando desarrollo asistido por IA y flujos de trabajo agénticos.
+      </p>
+      <p class="meta-hero">Cartagena, España · 11 años en desarrollo de software</p>
+
+      <div class="acciones">
+        <a class="boton primario" href="#proyectos">Ver proyectos</a>
+        <a class="boton secundario" href="https://github.com/andreu-marbor">GitHub</a>
+        <a class="boton secundario" href="https://www.linkedin.com/in/andreu-martinez/">LinkedIn</a>
+      </div>
+    </section>
+
+    <!-- 01 · Perfil -->
+    <section class="seccion" id="sobre" aria-labelledby="sobre-titulo">
+      <div class="contenedor">
+        <div class="cabecera-seccion">
+          <p class="antetitulo">01 · Perfil</p>
+          <h2 id="sobre-titulo">Sobre mí</h2>
+        </div>
+
+        <div class="prosa">
+          <p>
+            Trabajo como Lead Software Engineer y llevo alrededor de once años
+            desarrollando software. Casi todo ese tiempo ha sido backend con Java
+            y Spring en entornos enterprise: APIs, servicios e integraciones que
+            consumen otros equipos y que tienen que seguir funcionando dentro de
+            cinco años.
+          </p>
+          <p>
+            Mi interés principal es el diseño de sistemas: cómo se delimita un
+            dominio, qué depende de qué, cómo evoluciona una arquitectura sin
+            reescribirlo todo y qué hace que un sistema de larga duración sea
+            mantenible. El trabajo con Angular y desarrollo web me mantiene en
+            contacto con la otra punta de la cadena, del contrato de la API a la
+            interfaz.
+          </p>
+          <p>
+            Ahora mismo combino dos cosas: proyectos propios de punta a punta,
+            que puedo diseñar y construir completos, y la experimentación con
+            agentes de IA dentro del proceso de desarrollo.
+          </p>
         </div>
       </div>
     </section>
 
-    <footer>
-      <p>
-        Este sitio aloja además el <a href=".well-known/assetlinks.json">assetlinks.json</a>
-        que permite a las apps Android abrirse a pantalla completa.
-      </p>
-    </footer>
+    <!-- 02 · Enfoque -->
+    <section class="seccion" id="enfoque" aria-labelledby="enfoque-titulo">
+      <div class="contenedor">
+        <div class="cabecera-seccion">
+          <p class="antetitulo">02 · Enfoque</p>
+          <h2 id="enfoque-titulo">Enfoque de ingeniería</h2>
+          <p class="introduccion">
+            Áreas de competencia e interés, no un inventario de tecnologías.
+          </p>
+        </div>
+
+        <div class="rejilla">
+          <article class="tarjeta">
+            <h3>Arquitectura de software</h3>
+            <p>
+              Diseño y evolución de sistemas: límites del dominio, integración
+              entre servicios, dependencias bajo control y decisiones que
+              siguen siendo válidas dentro de cinco años.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Ingeniería backend</h3>
+            <p>
+              Java, Spring y Spring Boot. APIs REST, servicios e integraciones
+              con contratos claros, errores manejados y una idea precisa de qué
+              ocurre cuando algo falla en producción.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Desarrollo asistido por IA</h3>
+            <p>
+              Coding agents, subagents y flujos multi-agente. Qué parte del
+              trabajo conviene delegar, cómo revisar lo que produce el agente y
+              qué decisiones no se delegan.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Productividad de desarrollo</h3>
+            <p>
+              Tipado estricto, tests automáticos, CI y documentación que se
+              actualiza con el código: menos fricción entre escribir software y
+              mantenerlo.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · Proyectos -->
+    <section class="seccion" id="proyectos" aria-labelledby="proyectos-titulo">
+      <div class="contenedor">
+        <div class="cabecera-seccion">
+          <p class="antetitulo">03 · Proyectos</p>
+          <h2 id="proyectos-titulo">Proyectos</h2>
+          <p class="introduccion">
+            Proyectos reales, con el problema que resuelven, la arquitectura
+            elegida, las decisiones tomadas y sus límites.
+          </p>
+        </div>
+
+        <div class="lista-proyectos">
+
+          <!-- CatFoodCheck -->
+          <article class="proyecto" id="catfoodcheck">
+            <p class="proyecto-etiqueta">API + app móvil · Python y Flutter</p>
+            <h3>CatFoodCheck</h3>
+            <p class="proyecto-resumen">
+              Al comprar pienso para gato hace falta saber, en el momento, si la
+              marca cumple las pautas WSAVA; esa información está repartida en
+              bases de datos de terceros y no está a mano en el pasillo.
+              CatFoodCheck lo resuelve con dos piezas: una API que normaliza la
+              consulta y una app que solo escanea el código de barras y muestra
+              el resultado.
+            </p>
+
+            <dl class="proyecto-notas">
+              <dt>Arquitectura</dt>
+              <dd>
+                El backend es un único endpoint <code>GET /scan/{ean}</code> que
+                hace de proxy sobre Open Pet Food Facts y devuelve producto,
+                marca y si la marca cumple WSAVA. La app Flutter escanea el EAN
+                con la cámara y consume ese endpoint. Servicio desplegado en
+                Render.
+              </dd>
+
+              <dt>Decisiones</dt>
+              <dd>
+                Sin base de datos: no hay estado propio que guardar, la fuente
+                de verdad es un servicio externo. El backend cabe en un fichero
+                Python de 33 líneas, así que el coste de mantenimiento del MVP
+                es casi nulo. La URL del backend vive en un solo punto de la
+                app.
+              </dd>
+
+            </dl>
+
+            <details class="nota-extra">
+              <summary>Límites conocidos y siguiente paso</summary>
+              <p>
+                Sin tests, la lista de marcas WSAVA es una constante en el
+                código y la comparación es por subcadena. Antes de que crezca,
+                lo siguiente es testear esa lógica y sacar la lista a
+                configuración.
+              </p>
+            </details>
+
+            <ul class="etiquetas">
+              <li>Python</li>
+              <li>FastAPI</li>
+              <li>Flutter</li>
+              <li>mobile_scanner</li>
+              <li>Open Pet Food Facts</li>
+              <li>Render</li>
+            </ul>
+
+            <p class="enlaces-proyecto">
+              <a href="https://catfoodcheck.onrender.com/docs">Probar la API</a>
+              <a href="https://github.com/andreu-marbor/catfoodcheck">Backend</a>
+              <a href="https://github.com/andreu-marbor/catfoodcheck-app">App móvil</a>
+            </p>
+          </article>
+
+          <!-- 3 en raya -->
+          <article class="proyecto" id="tres-en-raya">
+            <p class="proyecto-etiqueta">PWA + APK · TypeScript</p>
+            <h3>3 en raya</h3>
+            <p class="proyecto-resumen">
+              Un juego sencillo usado como campo de pruebas para un producto
+              completo de principio a fin: CPU invencible, tres idiomas, PWA
+              instalable y APK publicada, con pruebas y CI que lo sostienen.
+            </p>
+
+            <dl class="proyecto-notas">
+              <dt>Arquitectura</dt>
+              <dd>
+                TypeScript y Vite, sin framework y sin dependencias de runtime.
+                La lógica de juego (reglas, minimax con poda alfa-beta,
+                marcador) está separada de la interfaz, y el i18n es propio:
+                claves planas en inglés con ficheros <code>es</code>,
+                <code>ca</code> y <code>en</code>.
+              </dd>
+
+              <dt>Decisiones</dt>
+              <dd>
+                Ni i18next ni Jest: 28 claves y pruebas deterministas no
+                justifican dos dependencias más. Los tests se empaquetan con
+                esbuild y se ejecutan con Node, reutilizando el compilador que
+                ya está en el proyecto. El service worker solo se registra en
+                producción, y Android llega como Trusted Web Activity generada
+                con Bubblewrap: una única base de código para web y app.
+              </dd>
+
+            </dl>
+
+            <details class="nota-extra">
+              <summary>Incidencia real y verificación de la IA</summary>
+              <p>
+                La primera APK se abría con barra de URL: el
+                <code>assetlinks.json</code> devolvía 404 en la raíz del
+                dominio. La solución fue publicar el Digital Asset Links en la
+                raíz del sitio que estás visitando.
+              </p>
+              <p>
+                500 partidas de la CPU contra un jugador aleatorio sin perder
+                ninguna, minimax contra minimax siempre empatadas y partidas
+                del modo fácil que sí deben perderse a veces. «IA invencible»
+                deja de ser una afirmación y pasa a ser un test.
+              </p>
+            </details>
+
+            <ul class="etiquetas">
+              <li>TypeScript</li>
+              <li>Vite</li>
+              <li>PWA</li>
+              <li>TWA / Android</li>
+              <li>i18n</li>
+              <li>GitHub Actions</li>
+            </ul>
+
+            <p class="enlaces-proyecto">
+              <a href="https://andreu-marbor.github.io/tres-en-raya/">Jugar</a>
+              <a href="https://github.com/andreu-marbor/tres-en-raya">Código</a>
+              <a href="https://github.com/andreu-marbor/tres-en-raya/releases/latest">Descargar APK</a>
+            </p>
+          </article>
+
+          <!-- Quiz Historia -->
+          <article class="proyecto" id="quiz-historia">
+            <p class="proyecto-etiqueta">En desarrollo · TypeScript</p>
+            <h3>Quiz Historia</h3>
+            <p class="proyecto-resumen">
+              Cuestionarios de Historia para estudiantes de ESO y Bachiller,
+              pensados para repaso real en el aula: sin backend, sin cuentas y
+              sin datos personales, guardando el progreso en el propio
+              dispositivo.
+            </p>
+
+            <dl class="proyecto-notas">
+              <dt>Arquitectura</dt>
+              <dd>
+                El contenido vive en JSON versionado (temas y preguntas) y pasa
+                por un validador propio: identificadores únicos, rangos y tipos
+                comprobados antes de arrancar. La lógica de selección,
+                corrección y barajado está separada del DOM para poder
+                testearla; jsdom entra solo en los tests de pantalla.
+              </dd>
+
+              <dt>Estado</dt>
+              <dd>
+                Fases 1 y 2 completas: cimientos y cinco pantallas con
+                enrutado, persistencia y tests. Pendientes: PWA, CI hacia
+                GitHub Pages, app Android y contenido real. El repositorio ya
+                está público; la web pública llega con la fase 4.
+              </dd>
+            </dl>
+
+            <ul class="etiquetas">
+              <li>TypeScript</li>
+              <li>Vite</li>
+              <li>JSON</li>
+              <li>jsdom</li>
+              <li>Tests</li>
+            </ul>
+
+            <p class="enlaces-proyecto">
+              <a href="https://github.com/andreu-marbor/quiz-historia">Código</a>
+            </p>
+          </article>
+
+          <!-- Este sitio -->
+          <article class="proyecto" id="este-sitio">
+            <p class="proyecto-etiqueta">Sitio estático · HTML y CSS</p>
+            <h3>Este sitio</h3>
+            <p class="proyecto-resumen">
+              El portfolio que estás leyendo, y además el punto donde se
+              resuelve un problema concreto de la plataforma Android: alojar el
+              <code>assetlinks.json</code> en la raíz del dominio para que las
+              Trusted Web Activity se abran a pantalla completa.
+            </p>
+
+            <dl class="proyecto-notas">
+              <dt>Arquitectura</dt>
+              <dd>
+                Dos páginas, español e inglés, que comparten un único CSS. Cero
+                JavaScript: navegación por anclas, cambio de idioma por enlace y
+                bloques de detalle con el elemento <code>details</code> nativo.
+              </dd>
+
+              <dt>Decisiones</dt>
+              <dd>
+                El stack más simple que resuelve el problema. Sin framework no
+                hay cadena de herramientas que mantener, ni dependencias que
+                actualizar ni build que se rompa: HTML y CSS publicados tal
+                cual.
+              </dd>
+            </dl>
+
+            <ul class="etiquetas">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>i18n</li>
+              <li>Accesibilidad</li>
+              <li>Digital Asset Links</li>
+            </ul>
+
+            <p class="enlaces-proyecto">
+              <a href="https://github.com/andreu-marbor/andreu-marbor.github.io">Código</a>
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · IA -->
+    <section class="seccion" id="ia" aria-labelledby="ia-titulo">
+      <div class="contenedor">
+        <div class="cabecera-seccion">
+          <p class="antetitulo">04 · Experimentación</p>
+          <h2 id="ia-titulo">Desarrollo asistido por IA</h2>
+        </div>
+
+        <blockquote class="cita">
+          ¿Cómo cambia el proceso de desarrollo de software cuando los agentes
+          de IA pasan a formar parte del equipo?
+        </blockquote>
+
+        <div class="prosa">
+          <p>
+            No lo planteo como «programar con IA», sino como una pregunta de
+            ingeniería: qué parte del trabajo conviene delegar a un agente, cómo
+            se revisa lo que produce, qué pruebas deben existir antes de delegar
+            y qué decisiones no se delegan.
+          </p>
+          <p>
+            Estoy experimentando con OpenCode y sus conceptos —coding agents,
+            subagents, skills, comandos, planificación por agentes y flujos
+            multi-agente— y anotando qué funciona, qué no y qué impacto real
+            tiene en la calidad y el mantenimiento del código.
+          </p>
+          <p>
+            Lo que voy comprobando: un agente acelera la ejecución, no la
+            responsabilidad. El diseño, la revisión y el criterio técnico siguen
+            siendo parte del trabajo.
+          </p>
+        </div>
+
+        <div class="bloque">
+          <h3>Qué estoy probando</h3>
+          <ul class="lista-marcas">
+            <li>Planificación y desglose de tareas con agentes</li>
+            <li>Generación y revisión de código</li>
+            <li>Documentación y tests dentro del mismo flujo</li>
+            <li>Subagents, skills y comandos propios en OpenCode</li>
+            <li>Flujos multi-agente para tareas más largas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 · Trayectoria -->
+    <section class="seccion" id="trayectoria" aria-labelledby="trayectoria-titulo">
+      <div class="contenedor">
+        <div class="cabecera-seccion">
+          <p class="antetitulo">05 · Trayectoria</p>
+          <h2 id="trayectoria-titulo">Experiencia y exploración</h2>
+          <p class="introduccion">
+            La distinción importa: a la izquierda, herramientas que llevo años
+            usando en producción; a la derecha, lo que estoy aprendiendo ahora.
+          </p>
+        </div>
+
+        <div class="columnas">
+          <div class="columna">
+            <h3>Experiencia consolidada</h3>
+            <p class="nota">Uso profesional de años, en sistemas en producción.</p>
+            <ul class="lista-marcas">
+              <li>Java</li>
+              <li>Spring / Spring Boot</li>
+              <li>APIs REST e integraciones</li>
+              <li>Aplicaciones empresariales</li>
+              <li>Arquitectura de software</li>
+              <li>Sistemas de larga duración</li>
+              <li>Angular y desarrollo web</li>
+              <li>Entornos enterprise</li>
+            </ul>
+          </div>
+
+          <div class="columna">
+            <h3>Explorando ahora</h3>
+            <p class="nota">
+              Donde estoy invirtiendo tiempo este año, todavía sin años de uso
+              profesional.
+            </p>
+            <ul class="lista-marcas">
+              <li>AI-assisted software engineering</li>
+              <li>Coding agents y flujos agénticos</li>
+              <li>OpenCode</li>
+              <li>Multi-agent workflows</li>
+              <li>Python y FastAPI</li>
+              <li>Flutter y mobile</li>
+              <li>Godot y desarrollo indie</li>
+              <li>Developer productivity</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA GitHub -->
+    <section class="seccion" aria-labelledby="github-titulo">
+      <div class="contenedor">
+        <div class="cta">
+          <div class="bloque-cta">
+            <h2 id="github-titulo">Más proyectos en GitHub</h2>
+            <p>
+              Código, releases y experimentos abiertos: el historial completo,
+              incluidas las decisiones y los cambios de rumbo.
+            </p>
+          </div>
+          <a class="boton primario" href="https://github.com/andreu-marbor">
+            Explorar en GitHub →
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-interno">
+      <p class="pie-nombre">Andreu Martínez Bordes</p>
+      <nav aria-label="Enlaces de contacto">
+        <a href="https://github.com/andreu-marbor">GitHub</a>
+        <a href="https://www.linkedin.com/in/andreu-martinez/">LinkedIn</a>
+        <a href="en.html" hreflang="en" lang="en">English</a>
+      </nav>
+      <p class="pie-copia">© 2026 Andreu Martínez Bordes</p>
+    </div>
+  </footer>
 </body>
 </html>
