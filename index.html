@@ -15,8 +15,6 @@
       --text: #1d1d1f;
       --muted: #6b7280;
       --line: #e7e3dd;
-      --x: #e63946;
-      --o: #457b9d;
       --accent: #1d1d1f;
       --radius: 18px;
     }
@@ -54,16 +52,16 @@
       margin-bottom: 36px;
     }
 
-    .marca {
-      font-size: 44px;
-      line-height: 1;
-      letter-spacing: -2px;
-      margin: 0 0 10px;
-      font-weight: 800;
+    .avatar {
+      display: block;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .10);
     }
-
-    .marca .x { color: var(--x); }
-    .marca .o { color: var(--o); }
 
     h1 {
       font-size: 26px;
@@ -179,7 +177,7 @@
 <body>
   <main>
     <header>
-      <p class="marca" aria-hidden="true">X<span class="x">·</span><span class="o">O</span></p>
+      <img class="avatar" src="images/avatar.jpg" alt="Retrato de Andreu Martínez Bordes" width="112" height="112">
       <h1>Andreu Martínez Bordes</h1>
       <p>Portfolio · desarrollo web y Android</p>
     </header>
