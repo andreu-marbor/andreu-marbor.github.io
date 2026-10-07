@@ -27,12 +27,13 @@ dependencias y sin JavaScript**: HTML y CSS publicados tal cual.
 Secciones, en este orden y con esta jerarquía de encabezados:
 
 1. **Hero** (`h1`): nombre, `Lead Software Engineer`, posicionamiento (experiencia
-   profesional en arquitectura, backend, frontend y desarrollo asistido por IA,
-   más la exploración agéntica fuera del trabajo), meta de ubicación/experiencia
-   y CTAs a proyectos, GitHub y LinkedIn.
+   profesional en backend, frontend, sistemas enterprise y desarrollo asistido
+   por IA, más la exploración agéntica fuera del trabajo), meta de
+   ubicación/experiencia y CTAs a proyectos, GitHub y LinkedIn.
 2. **01 · Perfil** (`h2`): once años repartidos entre backend y frontend
-   enterprise, interés por el diseño de sistemas, Codex en el trabajo y
-   experimentación con agentes fuera de él.
+   enterprise, interés por el diseño de sistemas y liderazgo técnico, Codex y
+   la adopción de IA en los equipos en el trabajo, y experimentación con
+   agentes fuera de él.
 3. **02 · Enfoque**: seis áreas de competencia e interés (arquitectura,
    backend, APIs e integraciones, frontend y aplicaciones cliente, desarrollo
    asistido por IA, productividad).
@@ -40,8 +41,9 @@ Secciones, en este orden y con esta jerarquía de encabezados:
    este sitio, presentados como **proyectos personales**. Cada uno con
    problema, arquitectura, decisiones y —en `<details>`— límites/incidencias.
 5. **04 · Práctica y experimentación**: desarrollo asistido por IA como
-   pregunta de ingeniería, separando **práctica profesional (Codex)** de
-   **experimentación personal (OpenCode, agentes, subagents)**.
+   pregunta de ingeniería, separando **práctica profesional (Codex y adopción
+   de IA en los equipos)** de **experimentación personal (OpenCode, agentes,
+   subagents)**.
 6. **05 · Trayectoria**: **experiencia profesional** en tres bloques
    (ingeniería y arquitectura · frontend y aplicaciones cliente · desarrollo
    asistido por IA) y, al final, **credenciales** (4 certificaciones OpenAI,
