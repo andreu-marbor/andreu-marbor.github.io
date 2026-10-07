@@ -8,5 +8,15 @@
         "c0611f2147456f0aaeffd5924c9112917e2b870e97404bb0a2a9b3d4ef060ec9"
       ]
     }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.andreumarbor.quizophistoria",
+      "sha256_cert_fingerprints": [
+        "b7666ba3b6dedfc2ae1f36e8025f364f242199f01d35a0fb4dcb0e0ad66b54cf"
+      ]
+    }
   }
 ]
