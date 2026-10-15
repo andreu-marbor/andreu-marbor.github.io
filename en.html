@@ -379,6 +379,65 @@
             </p>
           </article>
 
+          <!-- Sudoku -->
+          <article class="proyecto" id="sudoku">
+            <p class="proyecto-etiqueta">PWA + APK · TypeScript</p>
+            <h3>Sudoku</h3>
+            <p class="proyecto-resumen">
+              A full sudoku written from scratch: a homegrown generator with a
+              guaranteed unique solution, pencil notes, undo, a timer and a
+              persisted game in progress. Three languages, an installable PWA
+              and an APK, with the game logic separated from the UI so it can
+              be tested.
+            </p>
+
+            <dl class="proyecto-notas">
+              <dt>Architecture</dt>
+              <dd>
+                TypeScript and Vite, no framework. The generator uses
+                backtracking with solution counting: cells are removed in
+                symmetric pairs down to each difficulty's clue range, and every
+                puzzle is verified to have a unique solution before it is shown.
+                The whole game is a DOM-free state machine.
+              </dd>
+
+              <dt>Decisions</dt>
+              <dd>
+                Pencil-note candidates as a bit mask per cell: 81 numbers
+                instead of 81 arrays, serializing straight to
+                <code>localStorage</code>. Every move stores the previous state
+                of whatever it touches, so undo is exact, including the
+                automatic candidate cleanup. Deterministic tests with a
+                seeded RNG.
+              </dd>
+            </dl>
+
+            <details class="nota-extra">
+              <summary>Uniqueness is checked, not assumed</summary>
+              <p>
+                A sudoku is only valid if it has a unique solution: the solver
+                counts solutions with a limit of 2 and discards any puzzle that
+                does not reach one. That check is part of the generator and the
+                tests, not of luck.
+              </p>
+            </details>
+
+            <ul class="etiquetas">
+              <li>TypeScript</li>
+              <li>Vite</li>
+              <li>PWA</li>
+              <li>TWA / Android</li>
+              <li>i18n</li>
+              <li>GitHub Actions</li>
+            </ul>
+
+            <p class="enlaces-proyecto">
+              <a href="https://andreu-marbor.github.io/sudoku/">Play</a>
+              <a href="https://github.com/andreu-marbor/sudoku">Source</a>
+              <a href="https://github.com/andreu-marbor/sudoku/releases/latest">Download APK</a>
+            </p>
+          </article>
+
           <!-- Quiz Historia -->
           <article class="proyecto" id="quiz-historia">
             <p class="proyecto-etiqueta">In progress · TypeScript</p>

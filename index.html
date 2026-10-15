@@ -383,6 +383,65 @@
             </p>
           </article>
 
+          <!-- Sudoku -->
+          <article class="proyecto" id="sudoku">
+            <p class="proyecto-etiqueta">PWA + APK — TypeScript</p>
+            <h3>Sudoku</h3>
+            <p class="proyecto-resumen">
+              Un sudoku completo escrito de cero: generador propio con
+              solución única garantizada, notas, deshacer, cronómetro y
+              partida persistida. Tres idiomas, PWA instalable y APK, con la
+              lógica del juego separada de la interfaz para poder testearla.
+            </p>
+
+            <dl class="proyecto-notas">
+              <dt>Arquitectura</dt>
+              <dd>
+                TypeScript y Vite, sin framework. El generador usa backtracking
+                con conteo de soluciones: se eliminan casillas en pares
+                simétricos hasta el rango de pistas de cada dificultad, y se
+                verifica que cada puzzle tiene solución única antes de
+                mostrarlo. La partida completa es una máquina de estados sin
+                DOM.
+              </dd>
+
+              <dt>Decisiones</dt>
+              <dd>
+                Candidatos del modo lápiz como máscara de bits por casilla: 81
+                números en vez de 81 arrays y serialización directa a
+                <code>localStorage</code>. Cada jugada guarda el estado
+                anterior de lo que toca, así que el deshacer es exacto,
+                incluida la limpieza automática de candidatos. Pruebas
+                deterministas con RNG de semilla fija.
+              </dd>
+            </dl>
+
+            <details class="nota-extra">
+              <summary>La unicidad no se asume, se comprueba</summary>
+              <p>
+                Un sudoku solo es válido si tiene solución única: el solver
+                cuenta soluciones con límite 2 y descarta cualquier puzzle que
+                no llegue a una. Esa comprobación forma parte del generador y
+                de las pruebas, no de la buena suerte.
+              </p>
+            </details>
+
+            <ul class="etiquetas">
+              <li>TypeScript</li>
+              <li>Vite</li>
+              <li>PWA</li>
+              <li>TWA / Android</li>
+              <li>i18n</li>
+              <li>GitHub Actions</li>
+            </ul>
+
+            <p class="enlaces-proyecto">
+              <a href="https://andreu-marbor.github.io/sudoku/">Jugar</a>
+              <a href="https://github.com/andreu-marbor/sudoku">Código</a>
+              <a href="https://github.com/andreu-marbor/sudoku/releases/latest">Descargar APK</a>
+            </p>
+          </article>
+
           <!-- Quiz Historia -->
           <article class="proyecto" id="quiz-historia">
             <p class="proyecto-etiqueta">En desarrollo · TypeScript</p>
