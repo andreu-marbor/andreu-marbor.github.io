@@ -28,5 +28,15 @@
         "B7:66:6B:A3:B6:DE:DF:C2:AE:1F:36:E8:02:5F:36:4F:24:21:99:F0:1D:35:A0:FB:4D:CB:0E:0A:D6:6B:54:CF"
       ]
     }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.andreumarbor.triunfo",
+      "sha256_cert_fingerprints": [
+        "5C:C7:75:F6:CB:57:4A:CA:44:FB:3F:0E:15:61:AE:92:0F:BD:AF:60:D6:6A:5C:1D:1C:24:32:5A:8F:29:89:12"
+      ]
+    }
   }
 ]
